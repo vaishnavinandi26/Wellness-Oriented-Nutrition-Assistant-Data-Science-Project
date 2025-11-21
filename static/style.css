@@ -1,0 +1,81 @@
+/* Background Image and Page Reset */
+body {
+    font-family: 'Times New Roman', Georgia, serif;
+    background-image: url("/static/bg.jpg"); /* Replace with your own if desired */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Glassmorphism Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* 3D Button */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 6px #004080;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #339cff, #007bff);
+    box-shadow: 0 8px #003366;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px #003366;
+}
+
+/* Result Box */
+.result {
+    margin-top: 25px;
+    background-color: rgba(230, 247, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #b3e0ff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}

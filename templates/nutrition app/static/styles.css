@@ -1,0 +1,23 @@
+/* Background Image and Page Reset */
+body {
+    font-family: 'Times New Roman', Georgia, serif;
+    background-image: url("/static/bg.jpg"); /* Replace with your own if desired */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Glassmorphism Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}

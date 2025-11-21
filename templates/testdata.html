@@ -1,0 +1,26 @@
+@app.route('/testdata')
+def testdata():
+    data = load_training_data('training_data_1000.csv')
+    return render_template('testdata.html', data=data[:20])  # show only first 20
+<!-- templates/testdata.html -->
+<!DOCTYPE html>
+<html>
+<head><title>Test Dataset</title></head>
+<body>
+    <h2>Sample Training Records</h2>
+    <table border="1">
+        <tr>
+            {% for key in data[0].keys() %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+        {% for record in data %}
+        <tr>
+            {% for value in record.values() %}
+                <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

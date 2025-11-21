@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutrition Plan Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="result">
+            <h3>Your Recommended Plan</h3>
+            <p><strong>Calories:</strong> {{ calories }} kcal/day</p>
+            <h4>Macronutrient Ratio:</h4>
+            <ul>
+                <li>Carbs: {{ carbs }}g/day</li>
+                <li>Protein: {{ protein }}g/day</li>
+                <li>Fat: {{ fat }}g/day</li>
+            </ul>
+        </div>
+
+        <h3>Recommended Recipes:</h3>
+        <ul>
+            {% for recipe in recipes %}
+                <li>{{ recipe }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="{{ url_for('index') }}">Back to Form</a>
+    </div>
+</body>
+</html>
